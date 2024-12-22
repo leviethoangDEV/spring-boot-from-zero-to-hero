@@ -4,10 +4,10 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main # Chạy khi có push lên nhánh main
+      - master # Chạy khi có push lên nhánh master
   pull_request:
     branches:
-      - main
+      - master
 
 # Định nghĩa các job
 jobs:
