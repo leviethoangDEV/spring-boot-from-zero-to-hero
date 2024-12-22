@@ -1,5 +1,6 @@
 package vn.hoangdev.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 import vn.hoangdev.model.request.UserRequestDto;
 
@@ -9,8 +10,8 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
-    @PostMapping(value = "/", headers = "apiKey=v1.0")
-    public String addUser(@RequestBody UserRequestDto userRequestDto) {
+    @PostMapping("/")
+    public String addUser(@Valid  @RequestBody UserRequestDto userRequestDto) {
         return "User added successfully";
     }
 
